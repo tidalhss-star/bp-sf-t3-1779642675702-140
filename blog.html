@@ -1,85 +1,67 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>블로그 | 화곡 셔츠룸 - 마포 네트워크 보안</title>
-    <meta name="description" content="마포 네트워크 보안 전문 '화곡 셔츠룸'의 공식 블로그. 최신 위협 인텔리전스, 데이터 기반 방어 전략, 서버 보안 인사이트를 제공합니다. 전문가가 검증한 실무 지식.">
-    <meta name="keywords" content="화곡 셔츠룸 블로그, 마포 네트워크 보안 정보, 위협 인텔리전스, 서버 보안 팁, 엔드포인트 보호, 마포 보안 블로그">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    <link rel="canonical" href="https://sf-t3-1779642675702-140.maphoshirts.com/blog.html">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-acid-yellow">
-    <style>
-        /* ---------- RESET & BASE ---------- */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { font-size: 18px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-        body { font-family: 'Inter', 'Noto Sans KR', system-ui, sans-serif; background: #0b0a0a; color: #efebe9; line-height: 1.7; }
-        /* ---------- TYPOGRAPHY ---------- */
-        h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.02em; text-transform: uppercase; color: #f4e042; }
-        h1 { font-size: clamp(2.4rem, 6vw, 4rem); line-height: 0.95; margin-bottom: 0.3em; border-left: 6px solid #f4e042; padding-left: 0.4em; }
-        h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-top: 1.2em; margin-bottom: 0.5em; border-bottom: 3px solid #f4e042; display: inline-block; }
-        h3 { font-size: 1.4rem; margin-top: 1em; margin-bottom: 0.4em; }
-        p, li { font-size: 1rem; color: #ccc8c4; max-width: 70ch; }
-        a { color: #f4e042; text-decoration: none; border-bottom: 1px solid transparent; transition: border 0.2s; }
-        a:hover { border-bottom-color: #f4e042; }
-        /* ---------- SPACE ---------- */
-        section, header, footer { padding: 2.4rem 5%; max-width: 1200px; margin: 0 auto; }
-        section + section { margin-top: 1.2rem; }
-        .container { width: 100%; }
-        /* ---------- NAV (brutalist fixed) ---------- */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 5%; background: #111; border-bottom: 4px solid #f4e042; position: sticky; top: 0; z-index: 100; max-width: 100%; }
-        nav .logo { font-weight: 900; font-size: 1.2rem; color: #f4e042; text-transform: uppercase; letter-spacing: 0.1em; }
-        nav .nav-links { display: flex; gap: 1.2rem; list-style: none; }
-        nav .nav-links a { color: #efebe9; border: none; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; }
-        nav .nav-links a:hover { color: #f4e042; }
-        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
-        .hamburger span { width: 28px; height: 3px; background: #f4e042; }
-        .tel-link { font-weight: 800; color: #f4e042; border: 2px solid #f4e042; padding: 0.3rem 1rem; border-radius: 0; font-size: 0.9rem; transition: all 0.2s; }
-        .tel-link:hover { background: #f4e042; color: #0b0a0a; border-color: #f4e042; }
-        /* ---------- CARD SYSTEM ---------- */
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .card { background: #1c1a18; border: 2px solid #2a2826; padding: 1.5rem; position: relative; transition: border 0.3s, transform 0.2s; }
-        .card:hover { border-color: #f4e042; transform: translateY(-4px); }
-        .card h3 { margin-top: 0; }
-        .card p { font-size: 0.9rem; }
-        .card .meta { font-size: 0.75rem; color: #7a7570; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
-        .card .cta-link { display: inline-block; margin-top: 0.8rem; font-weight: 700; border: 1px solid #f4e042; padding: 0.3rem 1.2rem; color: #f4e042; }
-        .card .cta-link:hover { background: #f4e042; color: #0b0a0a; }
-        /* ---------- FAQ ---------- */
-        .faq-list { list-style: none; margin-top: 1.2rem; }
-        .faq-list li { border-bottom: 1px solid #2a2826; padding: 1rem 0; }
-        .faq-list li strong { display: block; color: #f4e042; margin-bottom: 0.2rem; font-size: 1.05rem; }
-        .faq-list li p { margin: 0; }
-        /* ---------- FOOTER ---------- */
-        footer { border-top: 4px solid #f4e042; padding-top: 2rem; margin-top: 2rem; text-align: center; font-size: 0.8rem; color: #7a7570; }
-        footer a { color: #efebe9; }
-        /* ---------- RESPONSIVE ---------- */
-        @media (max-width: 768px) {
-            nav .nav-links { display: none; flex-direction: column; background: #111; position: absolute; top: 60px; left: 0; width: 100%; padding: 1rem; border-bottom: 4px solid #f4e042; }
-            nav .nav-links.active { display: flex; }
-            .hamburger { display: flex; }
-            h1 { padding-left: 0.3em; }
-        }
-    </style>
-    <!-- JSON-LD for Local Business (shared across all pages) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "화곡 셔츠룸",
-        "description": "마포 네트워크 보안 전문. 실시간 위협 분석, 데이터 기반 방어 전략.",
-        "telephone": "010-6279-0862",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "서울특별시",
-            "addressRegion": "마포구",
-            "addressCountry": "KR"
-        },
-        "url": "https://sf-t3-1779642675702-140.pages.dev",
-        "openingHours": "Mo-Su 00:00-23:59"
-    }
-    </script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+ <title>블로그 | 화곡 셔츠룸 - 마포 네트워크 보안</title>
+ <meta name="description" content="마포 네트워크 보안 전문 '화곡 셔츠룸'의 공식 블로그. 최신 위협 인텔리전스, 데이터 기반 방어 전략, 서버 보안 인사이트를 제공합니다. 전문가가 검증한 실무 지식.">
+ <meta name="keywords" content="화곡 셔츠룸 블로그, 마포 네트워크 보안 정보, 위협 인텔리전스, 서버 보안 팁, 엔드포인트 보호, 마포 보안 블로그">
+ <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+ <link rel="canonical" href="https://sf-t3-1779642675702-140.maphoshirts.com/blog.html">
+ <style>
+ /* ---------- RESET & BASE ---------- */
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ html { font-size: 18px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+ body { font-family: 'Inter', 'Noto Sans KR', system-ui, sans-serif; background: #0b0a0a; color: #efebe9; line-height: 1.7; }
+ /* ---------- TYPOGRAPHY ---------- */
+ h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.02em; text-transform: uppercase; color: #f4e042; }
+ h1 { font-size: clamp(2.4rem, 6vw, 4rem); line-height: 0.95; margin-bottom: 0.3em; border-left: 6px solid #f4e042; padding-left: 0.4em; }
+ h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-top: 1.2em; margin-bottom: 0.5em; border-bottom: 3px solid #f4e042; display: inline-block; }
+ h3 { font-size: 1.4rem; margin-top: 1em; margin-bottom: 0.4em; }
+ p, li { font-size: 1rem; color: #ccc8c4; max-width: 70ch; }
+ a { color: #f4e042; text-decoration: none; border-bottom: 1px solid transparent; transition: border 0.2s; }
+ a:hover { border-bottom-color: #f4e042; }
+ /* ---------- SPACE ---------- */
+ section, header, footer { padding: 2.4rem 5%; max-width: 1200px; margin: 0 auto; }
+ section + section { margin-top: 1.2rem; }
+ .container { width: 100%; }
+ /* ---------- NAV (brutalist fixed) ---------- */
+ nav { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 5%; background: #111; border-bottom: 4px solid #f4e042; position: sticky; top: 0; z-index: 100; max-width: 100%; }
+ nav .logo { font-weight: 900; font-size: 1.2rem; color: #f4e042; text-transform: uppercase; letter-spacing: 0.1em; }
+ nav .nav-links { display: flex; gap: 1.2rem; list-style: none; }
+ nav .nav-links a { color: #efebe9; border: none; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; }
+ nav .nav-links a:hover { color: #f4e042; }
+ .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+ .hamburger span { width: 28px; height: 3px; background: #f4e042; }
+ .tel-link { font-weight: 800; color: #f4e042; border: 2px solid #f4e042; padding: 0.3rem 1rem; border-radius: 0; font-size: 0.9rem; transition: all 0.2s; }
+ .tel-link:hover { background: #f4e042; color: #0b0a0a; border-color: #f4e042; }
+ /* ---------- CARD SYSTEM ---------- */
+ .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+ .card { background: #1c1a18; border: 2px solid #2a2826; padding: 1.5rem; position: relative; transition: border 0.3s, transform 0.2s; }
+ .card:hover { border-color: #f4e042; transform: translateY(-4px); }
+ .card h3 { margin-top: 0; }
+ .card p { font-size: 0.9rem; }
+ .card .meta { font-size: 0.75rem; color: #7a7570; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
+ .card .cta-link { display: inline-block; margin-top: 0.8rem; font-weight: 700; border: 1px solid #f4e042; padding: 0.3rem 1.2rem; color: #f4e042; }
+ .card .cta-link:hover { background: #f4e042; color: #0b0a0a; }
+ /* ---------- FAQ ---------- */
+ .faq-list { list-style: none; margin-top: 1.2rem; }
+ .faq-list li { border-bottom: 1px solid #2a2826; padding: 1rem 0; }
+ .faq-list li strong { display: block; color: #f4e042; margin-bottom: 0.2rem; font-size: 1.05rem; }
+ .faq-list li p { margin: 0; }
+ /* ---------- FOOTER ---------- */
+ footer { border-top: 4px solid #f4e042; padding-top: 2rem; margin-top: 2rem; text-align: center; font-size: 0.8rem; color: #7a7570; }
+ footer a { color: #efebe9; }
+ /* ---------- RESPONSIVE ---------- */
+ @media (max-width: 768px) {
+ nav .nav-links { display: none; flex-direction: column; background: #111; position: absolute; top: 60px; left: 0; width: 100%; padding: 1rem; border-bottom: 4px solid #f4e042; }
+ nav .nav-links.active { display: flex; }
+ .hamburger { display: flex; }
+ h1 { padding-left: 0.3em; }
+ }
+ </style>
+ <!-- JSON-LD for Local Business (shared across all pages) -->
+ <script type="application/ld+json">{ "@context": "https://schema.org", "@type": "LocalBusiness", "name": "화곡 셔츠룸", "description": "마포 네트워크 보안 전문.</script>
   <meta property="og:url" content="https://sf-t3-1779642675702-140.maphoshirts.com/blog.html">
   <meta property="og:title" content="블로그 | 화곡 셔츠룸 - 마포 네트워크 보안">
   <meta property="og:description" content="마포 네트워크 보안 전문">
@@ -88,7 +70,7 @@
 </head>
 <body>
 
-<main><section class="container"><p class="meta">지역 정보 블로그 · 화곡 · 마포</p><h1>화곡 셔츠룸을 알아볼 때 확인하는 순서</h1><p>화곡 인근에서 셔츠룸을 검색하다 보면 정보가 여러 곳에 흩어져 있어 무엇부터 확인해야 할지 헷갈리기 쉽습니다. 이 글에서는 위치 확인부터 예약, 방문까지 순서대로 짚어보고, 헷갈리기 쉬운 용어와 실수도 함께 정리했습니다.</p></section><section class="card-grid container"><div class="card active"><h2>1. 위치와 접근성 확인</h2><p>화곡역을 기준으로 도보 거리인지, 대중교통 환승이 필요한지 먼저 확인하면 이동 시간을 가늠하기 쉽습니다.</p></div><div class="card"><h2>2. 운영 시간 확인</h2><p>요일별로 운영 시간이 다를 수 있어 방문 전 전화로 다시 한 번 확인하는 것이 안전합니다.</p></div><div class="card"><h2>3. 예약 방식 확인</h2><p>인원수와 희망 시간을 미리 전달하면 자리 배정이 빠르게 진행됩니다.</p></div><div class="card"><h2>4. 이용 방식 확인</h2><p>룸 단위로 공간이 나뉘어 있는 구조이므로 일행 규모에 맞는 공간을 안내받을 수 있는지 확인해두면 좋습니다.</p></div></section><section class="container"><h2>용어 정리</h2><p class="meta">문의 전 알아두면 대화가 빨라지는 표현들입니다.</p><ul><li><strong>셔츠룸</strong> — 룸 단위로 구획된 프라이빗 공간을 이용하는 형태를 가리키는 표현입니다.</li><li><strong>웨이팅</strong> — 자리 배정을 기다리는 대기 시간으로, 사전 예약을 통해 줄일 수 있습니다.</li><li><strong>지정 예약</strong> — 특정 인원이나 공간을 미리 지정해 예약해두는 방식입니다.</li></ul></section><section class="container"><h2>흔히 헷갈리는 부분</h2><p>화곡과 인접한 다른 지역의 상호를 혼동하는 경우가 많습니다. 도메인이나 상호명에 지역명이 함께 표기되어 있는지 확인하면 원하는 매장을 정확히 찾는 데 도움이 됩니다. 또한 예약 시 남기는 연락처는 예약 확인 용도로만 사용되는지 미리 확인해두는 것이 좋습니다.</p></section><section class="container"><h2>예약 전 확인 목록</h2><ul><li>방문 인원과 목적을 미리 정리해둡니다.</li><li>희망 시간대에 자리가 있는지 전화로 확인합니다.</li><li>주차가 필요한 경우 가능 여부를 함께 문의합니다.</li><li>상호명과 정확한 위치를 다시 한 번 확인합니다.</li></ul></section><section class="container"><h2>궁금한 점 모아보기</h2><ul class="faq-list"><li><strong>Q. 당일 예약도 가능한가요?</strong> A. 매장 상황에 따라 다르므로 전화로 자리 여부를 먼저 확인하시길 권장합니다.</li><li><strong>Q. 인원이 많으면 어떻게 하나요?</strong> A. 단체 인원은 사전에 알려주시면 공간 배정을 조율할 수 있습니다.</li><li><strong>Q. 주차는 어디에 하나요?</strong> A. 매장 인근 주차 가능 여부는 방문 전 문의로 확인하는 것이 정확합니다.</li><li><strong>Q. 예약을 변경하고 싶으면 어떻게 하나요?</strong> A. 변경 사항이 생기면 가능한 빨리 전화로 알려주시면 조율이 수월합니다.</li></ul></section><section class="container"><p class="cta-link">문의 전화 <a class="tel-link" href="tel:010-6279-0862">010-6279-0862</a></p></section></main>
+<main><section class="container"><p class="meta">지역 정보 블로그 · 화곡 · 마포</p><h1>화곡 셔츠룸을 알아볼 때 확인하는 순서</h1><p>화곡 인근에서 셔츠룸을 검색하다 보면 정보가 여러 곳에 흩어져 있어 무엇부터 확인해야 할지 헷갈리기 쉽습니다. 이 글에서는 위치 확인부터 예약, 방문까지 순서대로 짚어보고, 헷갈리기 쉬운 용어와 실수도 함께 정리했습니다.</p></section><section class="card-grid container"><div class="card active"><h2>1. 위치와 접근성 확인</h2><p>화곡역을 기준으로 도보 거리인지, 대중교통 환승이 필요한지 먼저 확인하면 이동 시간을 가늠하기 쉽습니다.</p></div><div class="card"><h2>2. 운영 시간 확인</h2><p>요일별로 운영 시간이 다를 수 있어 방문 전 전화로 다시 한 번 확인하는 것이 안전합니다.</p></div><div class="card"><h2>3. 예약 방식 확인</h2><p>인원수와 희망 시간을 미리 전달하면 자리 배정이 빠르게 진행됩니다.</p></div><div class="card"><h2>4. 이용 방식 확인</h2><p>룸 단위로 공간이 나뉘어 있는 구조이므로 일행 규모에 맞는 공간을 안내받을 수 있는지 확인해두면 좋습니다.</p></div></section><section class="container"><h2>용어 정리</h2><p class="meta">문의 전 알아두면 대화가 빨라지는 표현들입니다.</p><ul><li><strong>셔츠룸</strong> — 룸 단위로 구획된 프라이빗 공간을 이용하는 형태를 가리키는 표현입니다.</li><li><strong>웨이팅</strong> — 자리 배정을 기다리는 대기 시간으로, 사전 예약을 통해 줄일 수 있습니다.</li><li><strong>지정 예약</strong> — 특정 인원이나 공간을 미리 지정해 예약해두는 방식입니다.</li></ul></section><section class="container"><h2>흔히 헷갈리는 부분</h2><p>화곡과 인접한 다른 지역의 상호를 혼동하는 경우가 많습니다. 도메인이나 상호명에 지역명이 함께 표기되어 있는지 확인하면 원하는 매장을 정확히 찾는 데 도움이 됩니다. 또한 예약 시 남기는 연락처는 예약 확인 용도로만 사용되는지 미리 확인해두는 것이 좋습니다.</p></section><section class="container"><h2>예약 전 확인 목록</h2><ul><li>방문 인원과 목적을 미리 정리해둡니다.</li><li>희망 시간대에 자리가 있는지 전화로 확인합니다.</li><li>주차가 필요한 경우 가능 여부를 함께 문의합니다.</li><li>상호명과 정확한 위치를 다시 한 번 확인합니다.</li></ul></section><section class="container"><h2>궁금한 점 모아보기</h2><ul class="faq-list"><li><strong>Q. 당일 예약도 가능한가요?</strong> A. 매장 상황에 따라 다르므로 전화로 자리 여부를 먼저 확인하시길 권장합니다.</li><li><strong>Q. 인원이 많으면 어떻게 하나요?</strong> A. 단체 인원은 사전에 알려주시면 공간 배정을 조율할 수 있습니다.</li><li><strong>Q. 주차는 어디에 하나요?</strong> A. 매장 인근 주차 가능 여부는 방문 전 문의로 확인하는 것이 정확합니다.</li><li><strong>Q. 예약을 변경하고 싶으면 어떻게 하나요?</strong> A. 변경 사항이 생기면 가능한 빨리 전화로 알려주시면 조율이 수월합니다.</li></ul></section><section class="container"><p class="cta-link">문의 전화 </p></section></main>
 
 
 </body>
